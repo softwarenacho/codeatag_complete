@@ -19,9 +19,7 @@ class ProposalsController < ApplicationController
 
   def show
     @proposal = Proposal.find(params[:id])
-    p " This es the counter from Codea " * 10
-    @counter = @proposal.counter_codea
-    p @counter
+    @counter = @proposal.counter_codea.body
     # render 'proposals/show.html.erb'
   end
 
